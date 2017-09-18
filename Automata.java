@@ -42,7 +42,7 @@ public class Automata
 			System.out.print("Is state " + current_state + " a final state (Enter true or false): ");
 			final_state[current_state] = scnr.nextBoolean();
 		}
-		System.out.println("Automata created.");
+		System.out.println("Automata created.\n");
 	}
 	
 	// Checks if the given sentence is accepted by the automata.
@@ -63,7 +63,7 @@ public class Automata
 	// Prints the automata.
 	public void print_Automata()
 	{
-		System.out.println("Number of States (N): " + n);
+		System.out.println("\nNumber of States (N): " + n);
 		System.out.println("Number of Symbols (M): " + m);
 		for(int i = 0; i < state.length; i++)
 		{
@@ -72,6 +72,6 @@ public class Automata
 				System.out.println("State[" + i + "][" + j + "] = " + state[i][j]);
 			}
 		}
-		System.out.println("Final: " + Arrays.toString(final_state));
+		System.out.println("Final: " + Arrays.toString(final_state) + "\n");
 	}
 }
