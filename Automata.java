@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class Automata 
 {
@@ -41,5 +42,19 @@ public class Automata
 			return true;
 		}
 		return false;
+	}
+	
+	public void print_Automata()
+	{
+		System.out.println("Number of States (N): " + n);
+		System.out.println("Number of Symbols (M): " + m);
+		for(int i = 0; i < state.length; i++)
+		{
+			for(int j = 0; j < state[i].length; j++)
+			{
+				System.out.println("State[" + i + "][" + j + "] = " + state[i][j]);
+			}
+		}
+		System.out.println("Final: " + Arrays.toString(final_state));
 	}
 }

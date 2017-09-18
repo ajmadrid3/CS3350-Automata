@@ -13,6 +13,24 @@ public class Finite_Automata
 		Automata a = new Automata();
 		a.create_Automata(states, symbols);
 		
+		a.print_Automata();
+		
+		System.out.println("Input a sentence: ");
+		String sentence = scnr.next();
+		int[] input = new int[sentence.length()];
+		for(int i = 0; i < sentence.length(); i++)
+		{
+			input[i] = Character.getNumericValue(sentence.charAt(i));
+		}
+		boolean valid = a.check_Sentence(input);
+		if(valid)
+		{
+			System.out.println("The sentence is accepted.");
+		}
+		else
+		{
+			System.out.println("The sentence is not accepted.");
+		}
 	}
 
 }
